@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import math
-from matplotlib import animation, rc
+from matplotlib import animation
 
-
+# function to return coordinates from some basic parameters that describe a circle
 def circle_xy(theta, origin_x, origin_y, radius, theta_shift):
+
     theta = [i + theta_shift for i in theta]
 
     x = radius * np.cos(theta) + origin_x
@@ -12,11 +12,13 @@ def circle_xy(theta, origin_x, origin_y, radius, theta_shift):
 
     return x, y
 
+# make a test plot to get an idea of what the animation will look like
 theta = [i for i in np.linspace(0, 2*np.pi, 4)]
 
 xs = []
 ys = []
 
+# generate a list of shift values to rotate the polygon
 shifts = np.linspace(0,10,100)
 
 for i in shifts:
@@ -31,12 +33,10 @@ for (x,y) in zip(xs,ys):
 
 fig.savefig('checkplot.png')
 
-
-##### initialization function: plot the background of each frame
+# initialization function: plot the background of each frame
 def init():
     line.set_data([], [])
     return (line,)
-
 
 # animation function. This is called sequentially
 def animate(j, theta, shifts):
@@ -48,7 +48,6 @@ def animate(j, theta, shifts):
     ax.plot(x, y)
 
     return (line,)
-
 
 n = 10
 
