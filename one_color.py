@@ -1,4 +1,4 @@
-# This code has been authored by myself, Will Dodge. Started 2017 building some functions to analyze drone image data.
+# Will Dodge. Started 2017 building some functions to analyze drone image data.
 
 #/usr/bin/python
 # -*- coding: utf-8 -*-
