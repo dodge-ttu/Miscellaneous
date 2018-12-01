@@ -1,2 +1,2 @@
 # Miscellaneous
-Home for random code etc.
+Home for random code <i>etc</i>.
